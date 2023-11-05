@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import '../styles/App.css';
 
 const App = () => {
-  const alert_warn=() => { alert("cant edit it")};
-  [count, setCount] = useState(0)
-  const incre=() => { setCount(count + 1) };
+
+  let [count, setCount] = useState(0)
+
   return (
     <div className="ball">
-      <h1 className="count" ondoubleclick={ alert_warn}>{count}</h1>
-      <button className='increment-button' onclick={incre}>Increment</button>
+      <h1 className="count" onDoubleClick={() => { alert("cant edit it") }}>{count}</h1>
+      <button className='increment-button' onClick={() => { setCount(count + 1) }}>Increment</button>
     </div>
-  )
+  );
 }
 
 
